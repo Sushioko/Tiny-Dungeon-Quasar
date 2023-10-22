@@ -1,26 +1,25 @@
 body {
-  margin: 0;
-  overflow: hidden;
+    background: black;
+    color: white;
+    font-family: Arial, sans-serif;
 }
 
-.game-container {
-  width: 100%;
-  height: 100vh;
-  background: black;
-  position: relative;
+#game-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
 }
 
-.ship {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  background-color: white;
+#game {
+    background: url('background.jpg'); /* Use your space background */
+    width: 80%;
+    height: 600px;
+    border: 1px solid white;
 }
 
-.player {
-  bottom: 10px;
-}
-
-.enemy {
-  top: 10px;
+#character-stats {
+    width: 20%;
+    padding: 10px;
+    border: 1px solid white;
+    background: rgba(0, 0, 0, 0.5);
 }
