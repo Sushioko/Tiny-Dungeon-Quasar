@@ -1,25 +1,69 @@
-body {
-    background: black;
-    color: white;
-    font-family: Arial, sans-serif;
+const player = {
+  name: "Captain",
+  health: 100,
+  attack: 10,
+  defense: 5,
+  inventory: []
+};
+
+const enemies = [
+  { name: "Alien", health: 30, attack: 5 },
+  { name: "Robot", health: 40, attack: 8 }
+  // Add more enemies here
+];
+
+const canvas = document.getElementById("game-canvas");
+const ctx = canvas.getContext("2d");
+
+const npc = {
+  name: "Alien Trader",
+  dialogue: "Welcome, traveler! Would you like to trade?",
+  trade: (player) => {
+    // Implement trading logic here
+  }
+};
+
+document.addEventListener("keydown", function(event) {
+  switch(event.key) {
+    case "ArrowUp":
+      // Move character up
+      break;
+    case "ArrowDown":
+      // Move character down
+      break;
+    case "ArrowLeft":
+      // Move character left
+      break;
+    case "ArrowRight":
+      // Move character right
+      break;
+  }
+});
+
+function drawCharacter(character) {
+  // Implement character rendering logic using ctx.drawImage()
 }
 
-#game-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+function drawEnemy(enemy) {
+  // Implement enemy rendering logic
 }
 
-#game {
-    background: url('background.jpg'); /* Use your space background */
-    width: 80%;
-    height: 600px;
-    border: 1px solid white;
+function drawBackground() {
+  // Implement background rendering
 }
 
-#character-stats {
-    width: 20%;
-    padding: 10px;
-    border: 1px solid white;
-    background: rgba(0, 0, 0, 0.5);
+function gameLoop() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+  // Render game elements here
+  drawBackground();
+  drawCharacter(player);
+  drawEnemies(); // Loop through enemies and draw them
+  
+  // Update game logic here
+  
+  requestAnimationFrame(gameLoop);
 }
+
+// Start the game loop
+gameLoop();
