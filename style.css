@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.game-container {
+  width: 100%;
+  height: 100vh;
+  background: black;
+  position: relative;
+}
+
+.ship {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: white;
+}
+
+.player {
+  bottom: 10px;
+}
+
+.enemy {
+  top: 10px;
+}
